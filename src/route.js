@@ -44,8 +44,12 @@ export class Route {
   }
 
   #mergeSearchParams(searchParams = null, replace = false) {
-    const entries = new this.#URLSearchParams(this.#searchParams);
-    const newEntries = new this.#URLSearchParams(searchParams);
+    return this.mergeSearchParams(this.#searchParams, searchParams, replace);
+  }
+
+  mergeSearchParams(searchParams1, searchParams2, replace = false) {
+    const entries = new this.#URLSearchParams(searchParams1);
+    const newEntries = new this.#URLSearchParams(searchParams2);
     if (replace) {
       for (const [key, value] of newEntries.entries()) {
         entries.set(key, value);

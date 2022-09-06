@@ -1,6 +1,6 @@
 {
   "name": "simple-isomorphic-router",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple isomorphic router that is easily extendable",
   "main": "src/index.js",
   "type": "module",
